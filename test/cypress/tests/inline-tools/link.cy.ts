@@ -30,6 +30,11 @@ describe('Inline Tool Link', () => {
       .find('div.ce-block')
       .find('a')
       .should('have.attr', 'href', 'https://codex.so');
+
+    cy.get('[data-cy=editorjs]')
+      .find('div.ce-block')
+      .find('a')
+      .should('have.attr', 'target', '_blank');
   });
 
   it('should remove fake background on selection change', () => {

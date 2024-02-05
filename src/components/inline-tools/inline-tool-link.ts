@@ -395,6 +395,8 @@ export default class LinkInlineTool implements InlineTool {
     }
 
     document.execCommand(this.commandLink, false, link);
+
+    this.selection.findParentTag('A').setAttribute('target', '_blank');
   }
 
   /**
